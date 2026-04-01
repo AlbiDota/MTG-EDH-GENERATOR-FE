@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 0;
+    top: 0;
+    border-bottom: 2px solid;
+    margin-bottom: 5vh;
+}
+.navbar-links, .navbar-right-side {
+    display: flex;
+    align-items: center;
+    margin-inline: 5vw;
+}
+.navbar li {
+    list-style-type: none;
+    margin-inline: 2vw;
+}
+
+.footer {
+    margin-top: 5vh;
+    padding: 5vh 0;
+    border-top: 2px solid;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty-side {
+    flex: 0.5;
+}
