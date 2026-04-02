@@ -2,7 +2,7 @@ export async function apiCall(param) {
     // const url = process.env.url || "http://localhost:3001/deckbuilder"
     const url = "http://localhost:3001/deckbuilder"
     try {
-        const res = await fetch(`${url}/${param}`, {
+        const res = await fetch(`${url}/${decodeURIComponent(param)}`, {
             method: "GET",
             headers: {"Content-Type": "application/json"}
         });
