@@ -52,8 +52,15 @@ npm run dev
 
 <br/><br/>
 
+## resources used
+ALL card information and api calls done by the backend is from the blessed and wonderful [Scryfall](https://www.scryfall.com)
+
+empty card template from [BANESBOX on deviantart](https://www.deviantart.com/banesbox/art/MTG-Templates-634246660)
+
+color icons were downloaded from the [mtg fandom wiki](https://mtg.fandom.com/wiki/Main_Page)
+
 ## Author
 **GitHub:** [AlbiDota](https://github.com/AlbiDota)  
 
 
-empty card template from https://www.deviantart.com/banesbox/art/MTG-Templates-634246660
+
