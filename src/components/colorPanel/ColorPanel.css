@@ -1,0 +1,25 @@
+
+
+.color-button {
+    display: 'block';
+    width:120px;
+    height:120px;
+    border-radius: 100%;
+    padding: -50%;
+    border: 0;
+    background-color: transparent;
+    margin: 0 10px 0 10px;
+
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+
+    transition-duration: 300ms;
+}
+
+.color-button.selected {
+    border: 20px;
+    box-shadow: 0 0 10px green;
+}

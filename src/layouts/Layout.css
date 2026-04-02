@@ -6,6 +6,10 @@
     top: 0;
     border-bottom: 2px solid;
     margin-bottom: 5vh;
+
+    /* background-image: url("/top.png");
+    background-size: 100vw;
+    background-repeat: no-repeat; */
 }
 .navbar-links, .navbar-right-side {
     display: flex;
@@ -24,8 +28,17 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+
+    /* background-image: url("/bottom.png");
+    background-size: 100vw;
+    background-repeat: no-repeat; */
 }
 
 .empty-side {
     flex: 0.5;
+
+    /* background-image: url("/left.png"); */
+    /* background-size: 100vw; */
+    /* background-repeat: no-repeat; */
 }
+
