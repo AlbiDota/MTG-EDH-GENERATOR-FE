@@ -1,21 +1,59 @@
-# React + Vite
+# MTG-EDH-GENERATOR-BE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend for MTG-EDH-GENERATOR-FE using ReactJS + Vite!
 
-Currently, two official plugins are available:
+This frontend application is not AS "serious" as the backend part, and I've taken more liberties using AI as a tool to help with css, especially in getting the card aligned with the text input and such. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br/><br/>
 
-## React Compiler
+## Important guidelines
+I will be using the scryfall API to fetch mtg cards.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+As a part of the Wizards of the Coast Fan Content Policy, Scryfall provides their card data and image database free of charge for the primary purpose of creating additional MTG software, community content or research.
 
-Note: This will impact Vite dev & build performances.
+I will do my best to follow their guidelines:
 
-## Expanding the ESLint configuration
+- I will not be using Scryfall logos or names in a way that implies my work/product is endorsed by Scryfall.
+- I will not "paywall" access, or require anyone to make payments, take surveys, rate content, join chats etc.
+- I will not use Scryfall data to create new games, or to imply the information and images are from any other game than MTG.
+- I will not simply repackage, republish or proxy scryfall data. The software must create additional value for end-users.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+### Rate Limits and Good Citizenship
+From Scryfall's documentation:
+
+>We kindly ask that you insert 50 – 100 milliseconds of delay between the requests you send to the server at api.scryfall.com. (i.e., 10 requests per second on average).
+>
+>Submitting excessive requests to the server may result in a HTTP 429 Too Many Requests status code. Overloading the API after this point may result in a temporary or permanent ban of your IP address. Applications that continuously receive rate limit warnings over a longer period may also be blocked.
+
+## Current goal to provide "additional value to end-users"
+
+The goal of this project is to make an easy-to-use commander deck generator with user inputs probably not being any more than which colors they want to include, or a specific commander.
+
+<br/><br/>
+
+# Additional info
+The backend part of this project is in a separate github repo @ [MTG-EDH-GENERATOR-FE](https://github.com/AlbiDota/MTG-EDH-GENERATOR-BE).
+
+I suggest you check it out as well if you consider running this thingy locally.
+
+<br/><br/>
+
+## Run locally
+
+## Install dependencies
+``` in root directory
+npm i
+```
+### Run server
+``` in root directory
+npm run dev
+```
+
+<br/><br/>
+
+## Author
+**GitHub:** [AlbiDota](https://github.com/AlbiDota)  
 
 
 empty card template from https://www.deviantart.com/banesbox/art/MTG-Templates-634246660
