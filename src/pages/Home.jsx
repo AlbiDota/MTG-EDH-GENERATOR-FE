@@ -1,41 +1,41 @@
 import { useState } from "react";
-import ColorPanel from "../components/colorPanel/ColorPanel";
-import InputField from "../components/inputField/InputField";
+import ColorPanel from "../components/inputs/colorPanel/ColorPanel";
+import InputField from "../components/inputs/inputField/InputField";
 import Submit from "../components/submit/Submit";
+import { useNavigate } from "react-router-dom";
 
-// const url = process.env.url || "http://localhost:3001/deckbuilder"
-const url = "http://localhost:3001/deckbuilder"
 
 function Home() {
-
+    const nav = useNavigate();
     const [colorSelection, setColorSelection] = useState("");
     const [inputValue, setInputValue] = useState("");
 
-    async function handleSubmit() {
-        // den tar inntasta navn som førstepri
-        const param = inputValue.trim() ? 
-        `?commander=${inputValue}` :
-        `?colors=${colorSelection}`;
 
+    const handleSubmit = () => {
         if(!inputValue && !colorSelection) {
             alert("You need to select some colors OR enter a legendary name!");
             return;
         }
 
-        console.log(url+param);
+        // den tar inntasta navn som førstepri
+        let redirect = ""
+        // const param = inputValue.trim() ? 
+        // `?commander=${inputValue}` :
+        // `?colors=${colorSelection}`;
 
-        try {
-            const res = await fetch(`${url}/${param}`, {
-                method: "GET",
-                headers: {"Content-Type": "application/json"}
-            });
-            const result = await res.json();
-            console.log(result);
-        } catch(err) {
-            alert(err);
-            console.error(err);
+        if (inputValue.trim()) {
+            redirect = `/deck?commander=${encodeURIComponent(inputValue)}`;
+        } else {
+            redirect = `/deck?colors=${colorSelection}`;
         }
-    };
+
+        // console.log("url fra Home: ",url+redirect);
+
+        // redirect til Deck.jsx med query params
+        nav(redirect);
+
+    }
+
 
     return (
         <div style={{

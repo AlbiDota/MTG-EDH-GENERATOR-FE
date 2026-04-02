@@ -1,10 +1,10 @@
 import './ColorPanel.css'
-import W from '../../assets/big/W.svg'
-import U from '../../assets/big/U.svg'
-import B from '../../assets/big/B.svg'
-import R from '../../assets/big/R.svg'
-import G from '../../assets/big/G.svg'
-import C from '../../assets/big/C.svg'
+import W from '../../../assets/big/W.svg'
+import U from '../../../assets/big/U.svg'
+import B from '../../../assets/big/B.svg'
+import R from '../../../assets/big/R.svg'
+import G from '../../../assets/big/G.svg'
+import C from '../../../assets/big/C.svg'
 import { useState } from 'react'
 
 function ColorPanel({selection, setSelection}) {
