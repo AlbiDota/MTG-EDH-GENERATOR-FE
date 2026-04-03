@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import DeckGrid from "../components/outputs/DeckGrid";
+import DeckGrid from "../components/outputs/deckGrid/DeckGrid";
 
 
 function Deck() {

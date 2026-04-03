@@ -11,7 +11,7 @@ function App() {
         <Routes className="main">
             <Route element={<MainLayout />}>
                 <Route path={"/"} element={<Home/>} />
-                <Route path={"/deck"} element={<Deck/>} />
+                <Route path={"/deck"} element={<Deck/>} target="_blank" rel="noopener noreferrer"/>
             </Route>
         </Routes>
     

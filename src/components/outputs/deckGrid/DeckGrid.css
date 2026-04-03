@@ -1,0 +1,37 @@
+.deck-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.commander img {
+    width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.commander img:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.25);
+    box-shadow: 0 4px 8px black;
+}
+
+.loading {
+    font-size: 24px;
+    color: white;
+    background: black;
+    padding: 20px;
+    border-radius: 10px;
+}

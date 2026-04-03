@@ -22,4 +22,5 @@
 .color-button.selected {
     border: 20px;
     box-shadow: 0 0 10px green;
+    transform: scale(1.05);
 }

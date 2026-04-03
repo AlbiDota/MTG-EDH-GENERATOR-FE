@@ -32,7 +32,8 @@ function Home() {
         // console.log("url fra Home: ",url+redirect);
 
         // redirect til Deck.jsx med query params
-        nav(redirect);
+        // nav(redirect);
+        window.open(redirect, '_blank')
 
     }
 
