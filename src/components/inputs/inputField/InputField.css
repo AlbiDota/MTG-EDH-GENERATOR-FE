@@ -38,6 +38,9 @@
     color:aliceblue;
     font-family: 'Beleren Bold', serif;
 }
+.input-field:active {
+    box-shadow: 0 0 10px whitesmoke;
+}
 
 .input-field input::placeholder {
     color: black;

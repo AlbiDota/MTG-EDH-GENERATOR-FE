@@ -6,6 +6,10 @@
     margin: 0 auto;
 }
 
+img {
+    background-color: transparent;
+}
+
 .commander img {
     width: 400px;
     height: auto;

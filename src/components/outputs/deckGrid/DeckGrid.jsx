@@ -47,7 +47,7 @@ function DeckGrid() {
         <div style={{display:"flex", flexDirection:"column", alignItems:"center"}}>
             <div className="commander">
                 {commander ? (
-                    <a href={commander.uri} target="_blank" rel="noopener noreferrer">
+                    <a href={commander.uri} draggable={false} target="_blank" rel="noopener noreferrer">
                         <img
                             src={commander.image}
                             alt={commander.name}
@@ -62,7 +62,7 @@ function DeckGrid() {
             </div>
             <div className="deck-grid">
                 {the99.map((card, index) => (
-                    <a href={card.uri} target="_blank" rel="noopener noreferrer">
+                    <a href={card.uri} draggable={false} target="_blank" rel="noopener noreferrer">
                         <img 
                             className="card"
                             key={index}

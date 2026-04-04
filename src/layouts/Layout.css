@@ -7,6 +7,9 @@
     border-bottom: 2px solid;
     margin-bottom: 5vh;
 
+    font-size: x-large;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+
     /* background-image: url("/top.png");
     background-size: 100vw;
     background-repeat: no-repeat; */
@@ -17,8 +20,12 @@
     margin-inline: 5vw;
 }
 .navbar li {
+    color: black;
     list-style-type: none;
     margin-inline: 2vw;
+    background-color: #3ec343;
+    padding: 10px 20px;
+    border-radius: 10px; 
 }
 
 .footer {
@@ -32,6 +39,15 @@
     /* background-image: url("/bottom.png");
     background-size: 100vw;
     background-repeat: no-repeat; */
+}
+
+.footer button {
+    color: black;
+    list-style-type: none;
+    background-color: #3ec343;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    font-size: large;
 }
 
 .empty-side {

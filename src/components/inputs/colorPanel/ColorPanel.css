@@ -18,9 +18,11 @@
 
     transition-duration: 300ms;
 }
-
+.color-button:hover {
+    scale: 1.025;
+}
 .color-button.selected {
     border: 20px;
-    box-shadow: 0 0 10px green;
+    box-shadow: 0 0 10px whitesmoke;
     transform: scale(1.05);
 }

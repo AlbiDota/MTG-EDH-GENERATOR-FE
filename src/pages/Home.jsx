@@ -1,9 +1,8 @@
 import { useState } from "react";
 import ColorPanel from "../components/inputs/colorPanel/ColorPanel";
 import InputField from "../components/inputs/inputField/InputField";
-import Submit from "../components/submit/Submit";
 import { useNavigate } from "react-router-dom";
-
+import "./pages.css";
 
 function Home() {
     const nav = useNavigate();
@@ -53,7 +52,7 @@ function Home() {
         <h3>.. or by name</h3>
         <InputField input={inputValue} setInput={setInputValue}/>
         <br/><br/>
-        <button onClick={handleSubmit}>Submit & pray</button>
+        <button onClick={handleSubmit} className="btn">Submit & pray</button>
         </div>
     )
 }
