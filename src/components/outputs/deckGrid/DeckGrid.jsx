@@ -33,7 +33,7 @@ function DeckGrid() {
     },[param]);
 
     if (loading) {
-        return <div className="loading"> HOOOOOOOOOOLD!!!! </div>
+        return <div className="loading"style={{display:"flex", flexDirection:"column", alignItems:"center"}}> HOOOOOOOOOOLD!!!! </div>
     }
 
     const commander = deck?.[0];
@@ -58,7 +58,7 @@ function DeckGrid() {
                             
                         />
                     </a>
-                ) : (<img src="/src/assets/empty_card.gif" draggable={false}/>)}
+                ) : (<img src="/empty_card.gif" draggable={false}/>)}
             </div>
             <div className="deck-grid">
                 {the99.map((card, index) => (

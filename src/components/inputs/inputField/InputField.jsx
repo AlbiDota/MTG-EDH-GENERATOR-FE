@@ -14,7 +14,7 @@ function InputField({input, setInput}) {
     return (
         <div className="input-field">
             <div>
-                <img src="/src/assets/empty_card.gif" alt="card" draggable="false" />
+                <img src="/empty_card.gif" alt="card" draggable="false" />
                 <input
                     type="text"
                     value={input}
