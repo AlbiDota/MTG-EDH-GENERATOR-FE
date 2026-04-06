@@ -1,10 +1,16 @@
 import './ColorPanel.css'
-import W from '../../../assets/big/W.svg'
-import U from '../../../assets/big/U.svg'
-import B from '../../../assets/big/B.svg'
-import R from '../../../assets/big/R.svg'
-import G from '../../../assets/big/G.svg'
-import C from '../../../assets/big/C.svg'
+import W from '../../../assets/big/W.png'
+import U from '../../../assets/big/U.png'
+import B from '../../../assets/big/B.png'
+import R from '../../../assets/big/R.png'
+import G from '../../../assets/big/G.png'
+import C from '../../../assets/big/C.png'
+// import W from '../../../assets/big/W.svg'
+// import U from '../../../assets/big/U.svg'
+// import B from '../../../assets/big/B.svg'
+// import R from '../../../assets/big/R.svg'
+// import G from '../../../assets/big/G.svg'
+// import C from '../../../assets/big/C.svg'
 import { useState } from 'react'
 
 function ColorPanel({selection, setSelection}) {
@@ -56,7 +62,7 @@ function ColorPanel({selection, setSelection}) {
                         opacity: selection.length>0 && !selection.includes(color.name) ? 0.5 : 1
                     }}
                 >
-                    <img src={color.img} alt={color.name} draggable="false"/>
+                    <img src={color.img} alt={color.name} className={`img ${selection.includes(color.name) ? "selected" : ""}`} draggable="false"/>
                 </button>
             ))}
         </div>

@@ -21,8 +21,10 @@
 .color-button:hover {
     scale: 1.025;
 }
-.color-button.selected {
+.img.selected {
+    transition-duration: 300ms;
     border: 20px;
+    border-radius: 100%;
     box-shadow: 0 0 10px whitesmoke;
     transform: scale(1.05);
 }
