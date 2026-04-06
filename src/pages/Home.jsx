@@ -53,6 +53,8 @@ function Home() {
         <InputField input={inputValue} setInput={setInputValue}/>
         <br/><br/>
         <button onClick={handleSubmit} className="btn">Submit & pray</button>
+        <br/><br/>
+        <p><strong>This MTG EDH deck generator is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.</strong></p>
         </div>
     )
 }

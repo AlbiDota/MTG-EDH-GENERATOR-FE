@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home';
 import MainLayout from './layouts/MainLayout';
 import Deck from './pages/Deck';
+import Readme from './pages/Readme';
 /**
 * MTG commander deck generator frontend
 * 
@@ -17,6 +18,7 @@ function App() {
             <Route element={<MainLayout />}>
                 <Route path={"/"} element={<Home/>} />
                 <Route path={"/deck"} element={<Deck/>} target="_blank" rel="noopener noreferrer"/>
+                <Route path={"/readme"} element={<Readme/>} />
             </Route>
         </Routes>
     

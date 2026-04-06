@@ -34,3 +34,7 @@ h1, h2, h3 {
 h3 {
     margin: 15px 0 15px 0; 
 }
+
+p {
+    margin-inline: 20px;
+}

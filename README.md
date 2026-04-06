@@ -84,7 +84,7 @@ I suggest you check it out as well if you consider running this thingy locally.
 <br/><br/>
 ## Run locally
 
-## Install dependencies
+### Install dependencies
 ``` in root directory
 npm i
 ```

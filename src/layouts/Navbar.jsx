@@ -8,6 +8,7 @@ const Navbar = () => {
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="https://github.com/AlbiDota/MTG-EDH-GENERATOR-FE" target="_blank" rel="noopener noreferrer">Frontend</Link></li>
                 <li><Link to="https://github.com/AlbiDota/MTG-EDH-GENERATOR-BE" target="_blank" rel="noopener noreferrer">Backend</Link></li>
+                <li><Link to="/readme">README</Link></li>
                 
 
             </ul>
