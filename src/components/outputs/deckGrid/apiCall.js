@@ -1,6 +1,7 @@
 export async function apiCall(param) {
     // const url = process.env.url || "http://localhost:3001/deckbuilder"
-    const url = "http://localhost:3001/deckbuilder"
+    // const url = "http://localhost:3001/deckbuilder"
+    const url = "http://mtg-backend-env.eba-ngp9ifxe.eu-north-1.elasticbeanstalk.com/"
     try {
         const res = await fetch(`${url}/${decodeURIComponent(param)}`, {
             method: "GET",
