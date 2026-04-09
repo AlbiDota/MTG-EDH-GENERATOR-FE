@@ -40,6 +40,7 @@
 }
 .input-field:active {
     box-shadow: 0 0 10px whitesmoke;
+     border-radius: 3.5%;
 }
 
 .input-field input::placeholder {

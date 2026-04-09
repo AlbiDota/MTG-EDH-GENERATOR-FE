@@ -58,7 +58,7 @@ function DeckGrid() {
                             
                         />
                     </a>
-                ) : (<img src="/empty_card.gif" draggable={false}/>)}
+                ) : (<div className="commander"><p>I'm sorry it didn't work :(<br/>Might be hardware overload or weak exception handling on my backend :((</p><img src="/empty_card.gif" className="commander" draggable={false}/></div>)}
             </div>
             <div className="deck-grid">
                 {the99.map((card, index) => (
