@@ -78,8 +78,8 @@ function DeckGrid() {
             </div>
             <div className="deck-list">
                 <br/><br/><br/><br/>
-                {deck.map((card, index) => !card.type.includes("Basic Land") ? <p key={card.name} style={{margin:"-0.5px"}}>{card.name}</p>:<></>)}
-                {deck.map((card, index) => card.type.includes("Basic Land") ? <p key={card.name} style={{margin:"-0.5px"}}>{card.name}</p>:<></>)}
+                {deck.map((card, index) => !card.type.includes("Land") ? <p key={card.name} style={{margin:"-0.5px"}}>{card.name}</p>:<></>)}
+                {deck.map((card, index) => card.type.includes("Land") ? <p key={card.name} style={{margin:"-0.5px"}}>{card.name}</p>:<></>)}
             </div>
         </div>
     )
