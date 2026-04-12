@@ -1,7 +1,7 @@
 {
   "name": "mtg-edh-generator-fe",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "author": "Albert Einarssønn",
   "scripts": {

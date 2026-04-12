@@ -4,17 +4,21 @@
     gap: 10px;
     max-width: 1200px;
     margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 300ms ease-in-out;
+
 }
 
 img {
     background-color: transparent;
+    border-radius: 4%;
 }
 
 .commander img {
     width: 400px;
     height: auto;
     margin-bottom: 20px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .commander img:hover {
@@ -33,9 +37,43 @@ img {
 }
 
 .loading {
-    font-size: 24px;
+    font-size: 64px;
     color: white;
     background: black;
     padding: 20px;
     border-radius: 10px;
+}
+
+.filter-panel {
+}
+
+.filter-button {
+    color: black;
+    margin-inline: 5px;
+    background-color: #04AA6D;
+    padding: 10px 20px;
+    border-radius: 10px; 
+    font-size: large;
+    transition-duration: 300ms;
+    user-select: none;
+}
+
+.filter-button:hover {
+    background-color: #04AA6D;
+    scale: 1.025;
+}
+
+.filter-button:active {
+    /* box-shadow: 3px 3px 3px #646464; */
+    background-color: #3ec343;
+    
+}
+
+.filter-button.selected {
+    transition-duration: 300ms;
+    background-color: #3ec343;
+    border: 20px;
+    /* border-radius: 150%; */
+    box-shadow: 0 0 10px whitesmoke;
+    /* transform: scale(1.05); */
 }

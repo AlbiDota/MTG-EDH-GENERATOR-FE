@@ -9,7 +9,10 @@ function DeckGrid() {
     const path = useLocation();
     // const pathSearch = new URLSearchParams(path.search);
     const param = path.search;
-    console.log(param);
+    // console.log(param);
+
+    const [filter, setFilter] = useState(null);
+
 
     // api call
     const [loading, setLoading] = useState(true);
@@ -33,14 +36,44 @@ function DeckGrid() {
     },[param]);
 
     if (loading) {
-        return <div className="loading"style={{display:"flex", flexDirection:"column", alignItems:"center"}}> HOOOOOOOOOOLD!!!! </div>
+        return <div className="loading"style={{display:"flex", flexDirection:"column", alignItems:"center", margin:"200px"}}> HOOOOOOOOOOLD!!!! </div>
     }
 
     const commander = deck?.[0];
     const the99 = deck?.slice(1) || [];
 
 
+    let basics = [];
+    the99.forEach(card => {
+        if (card.type.includes("Basic Land")) {
+            const index = basics.findIndex(i=>i[card.name]!=undefined);
 
+            if (index==-1) {
+                basics.push({[card.name]:1});
+            } else {
+                basics[index][card.name] +=1;
+            }
+            
+        }
+    });
+
+    
+    // filter logic
+    let filteredDeck = the99;
+    if (filter) {
+        if (filter=="other") {
+            filteredDeck = the99.filter(card => 
+                !card.type.toLowerCase().includes("sorcery") &&
+                !card.type.toLowerCase().includes("instant") &&
+                !card.type.toLowerCase().includes("enchantment") &&
+                !card.type.toLowerCase().includes("artifact") &&
+                !card.type.toLowerCase().includes("land") &&
+                !card.type.toLowerCase().includes("creature")
+            );
+        } else {
+            filteredDeck = the99.filter(card => card.type.toLowerCase().includes(filter))
+        }
+    }
 
 
     return (
@@ -58,10 +91,23 @@ function DeckGrid() {
                             
                         />
                     </a>
-                ) : (<div className="commander"><p>I'm sorry it didn't work :(<br/>Might be hardware overload or weak exception handling on my backend :((</p><img src="/empty_card.gif" className="commander" draggable={false}/></div>)}
+                ) : (<div className="commander"><p>I'm sorry it didn't work :(<br/>Might be hardware overload or poor exception handling on my backend :((</p><img src="/empty_card.gif" className="commander" draggable={false}/></div>)}
             </div>
+            <div className="filter-panel">
+            {!loading ? (<>
+                <button className={`filter-button ${filter==null?"selected":""}`} onClick={()=>setFilter(null)}>All</button>
+                <button className={`filter-button ${filter=="sorcery"?"selected":""}`} onClick={()=>setFilter("sorcery")}>Sorceries</button>
+                <button className={`filter-button ${filter=="instant"?"selected":""}`} onClick={()=>setFilter("instant")}>Instants</button>
+                <button className={`filter-button ${filter=="enchantment"?"selected":""}`} onClick={()=>setFilter("enchantment")}>Enchantments</button>
+                <button className={`filter-button ${filter=="artifact"?"selected":""}`} onClick={()=>setFilter("artifact")}>Artifacts</button>
+                <button className={`filter-button ${filter=="creature"?"selected":""}`} onClick={()=>setFilter("creature")}>Creatures</button>
+                <button className={`filter-button ${filter=="land"?"selected":""}`} onClick={()=>setFilter("land")}>Lands</button>
+                {/* <button className="filter-button" onClick={()=>setFilter("other")}>Other?</button> */}
+            </>):(<></>)}
+            </div><br/>
+            
             <div className="deck-grid">
-                {the99.map((card, index) => (
+                {filteredDeck.map((card, index) => (
                     <a href={card.uri} draggable={false} target="_blank" rel="noopener noreferrer">
                         <img 
                             className="card"
@@ -78,8 +124,10 @@ function DeckGrid() {
             </div>
             <div className="deck-list">
                 <br/><br/><br/><br/>
-                {deck.map((card, index) => !card.type.includes("Land") ? <p key={card.name} style={{margin:"-0.5px"}}>{card.name}</p>:<></>)}
-                {deck.map((card, index) => card.type.includes("Land") ? <p key={card.name} style={{margin:"-0.5px"}}>{card.name}</p>:<></>)}
+                {deck.map((card, index) => !card.type.includes("Land") ? <p key={card.name} style={{margin:"-0.5px"}}>1 {card.name}</p>:<></>)}
+                <br/>{deck.map((card, index) => card.type.includes("Land")&& !card.type.includes("Basic Land") ? <p key={card.name} style={{margin:"-0.5px"}}>1 {card.name}</p>:<></>)}
+                {/* {basics.map((land, index) => <p key={land.name} style={{margin:"-0.5px"}}>{card.name}</p>)} */}
+                {basics.map((land, index) => {const [name, count] = Object.entries(land)[0]; return(<p key={name}style={{margin:"-0.5px"}}>{count} {name}</p>)})}
             </div>
         </div>
     )

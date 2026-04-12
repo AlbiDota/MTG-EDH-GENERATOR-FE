@@ -14,13 +14,12 @@
 }
 
 .btn:hover {
-    background-color: #04AA6D;
     scale: 1.025;
 }
 
 .btn:active {
     box-shadow: 0 3px #646464;
-    background-color: #3ec343;
+    background-color: #04AA6D;
     
 }
 
@@ -30,6 +29,7 @@ h1, h2, h3 {
     border-radius: 10px; 
     text-align: center; 
     margin: 15px 0; 
+    user-select: none;
 }
 h3 {
     margin: 15px 0 15px 0; 
