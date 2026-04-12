@@ -91,10 +91,10 @@ function DeckGrid() {
                             
                         />
                     </a>
-                ) : (<div className="commander"><p>I'm sorry it didn't work :(<br/>Might be hardware overload or poor exception handling on my backend :((</p><img src="/empty_card.gif" className="commander" draggable={false}/></div>)}
-            </div>
+                ) : (<div className="commander"><p>I'm sorry it didn't work :(<br/>Might be hardware overload or poor exception handling on my backend :((</p></div>)}
+            </div><br/>
             <div className="filter-panel">
-            {!loading ? (<>
+            {!loading && deck.length ? (<>
                 <button className={`filter-button ${filter==null?"selected":""}`} onClick={()=>setFilter(null)}>All</button>
                 <button className={`filter-button ${filter=="sorcery"?"selected":""}`} onClick={()=>setFilter("sorcery")}>Sorceries</button>
                 <button className={`filter-button ${filter=="instant"?"selected":""}`} onClick={()=>setFilter("instant")}>Instants</button>
