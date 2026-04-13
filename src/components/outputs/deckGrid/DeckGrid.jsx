@@ -107,7 +107,7 @@ function DeckGrid() {
             </div><br/>
             
             <div className="deck-grid">
-                {filteredDeck.map((card, index) => (
+                {filteredDeck.map((card, index) => !card.type.includes("Land")?(
                     <a href={card.uri} draggable={false} target="_blank" rel="noopener noreferrer">
                         <img 
                             className="card"
@@ -120,7 +120,21 @@ function DeckGrid() {
                             
                         />
                     </a>
-                ))}
+                ):<></>)}
+                {filteredDeck.map((card, index) => card.type.includes("Land")?(
+                    <a href={card.uri} draggable={false} target="_blank" rel="noopener noreferrer">
+                        <img 
+                            className="card"
+                            key={index}
+                            src={card.image}
+                            alt={card.name}
+                            draggable={false}
+                            onMouseEnter={(e) => e.preventDefault()}
+                            onMouseLeave={(e) => e.preventDefault()}
+                            
+                        />
+                    </a>
+                ):<></>)}
             </div>
             <div className="deck-list">
                 <br/><br/><br/><br/>
